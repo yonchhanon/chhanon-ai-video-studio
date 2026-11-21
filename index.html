@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>CHHANON AI VIDEO STUDIO</title>
+<style>
+:root{--bg:#0b1120;--panel:#121c2e;--panel2:#1b2940;--line:#2a3a54;--text:#f5f7fb;--muted:#aab7ca;--red:#ef4444;--purple:#8b5cf6}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#0b1120,#111a2c);color:var(--text);font:15px system-ui,-apple-system,"Noto Sans Khmer",sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 15px;background:var(--red);color:white;font-weight:700}
+button.secondary{background:#26364f;color:#eaf0fa;border:1px solid var(--line)}button:disabled{opacity:.45;cursor:not-allowed}
+.app{max-width:1200px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
+.brand{display:flex;align-items:center;gap:11px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#ef4444,#7c3aed);display:grid;place-items:center;font-weight:900;font-size:19px}
+h1{font-size:17px;margin:0;letter-spacing:.5px}.tag{font-size:11px;color:var(--muted);margin-top:3px}
+.lang{background:#26364f;color:white;border:1px solid var(--line);border-radius:10px;padding:9px}
+.hero{padding:26px;border:1px solid var(--line);border-radius:22px;background:radial-gradient(circle at 90% 10%,#38245f 0,transparent 34%),linear-gradient(120deg,#17253b,#111827);margin-bottom:18px}
+.eyebrow{color:#c4b5fd;font-size:12px;font-weight:800;letter-spacing:1px}.hero h2{font-size:clamp(25px,5vw,42px);line-height:1.15;margin:12px 0}.hero p{color:var(--muted);max-width:650px;line-height:1.7}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.layout{display:grid;grid-template-columns:220px 1fr;gap:17px}.side,.panel,.tile{background:rgba(18,28,46,.92);border:1px solid var(--line);border-radius:18px}
+.side{padding:12px;height:max-content}.nav{display:flex;flex-direction:column;gap:7px}.nav button{background:transparent;color:#c8d3e3;text-align:left;font-weight:600}.nav button.active,.nav button:hover{background:#26364f;color:white}
+.content{min-width:0}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:5px 0 14px}.section-head h3{margin:0;font-size:20px}.muted{color:var(--muted);font-size:13px}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tile{padding:17px;min-height:130px}.tile .ico{font-size:25px}.tile h4{margin:9px 0 5px}.tile p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+.panel{padding:18px;margin-bottom:13px}.field{display:flex;flex-direction:column;gap:7px;margin:12px 0}.field label{font-size:13px;color:#d6dfed}.field input,.field textarea,.field select{background:#0c1525;color:white;border:1px solid var(--line);border-radius:11px;padding:12px;width:100%}.field textarea{min-height:110px;resize:vertical}
+.project{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}.project:last-child{border:0}.pill{font-size:11px;color:#ddd6fe;background:#382a5e;padding:5px 9px;border-radius:99px}
+.drop{border:1px dashed #60728d;border-radius:14px;padding:24px;text-align:center;background:#0e192a}.video{width:100%;max-height:360px;background:#05080e;border-radius:12px;margin-top:12px}
+.notice{background:#302718;border:1px solid #745323;color:#f7d9a1;border-radius:12px;padding:12px;font-size:13px;line-height:1.6}
+footer{color:#8190a7;font-size:11px;text-align:center;padding:22px}
+@media(max-width:720px){.app{padding:12px}.layout{grid-template-columns:1fr}.nav{display:grid;grid-template-columns:repeat(2,1fr)}.nav button{font-size:12px;padding:10px}.tiles{grid-template-columns:1fr}.hero{padding:20px}.top{align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+  <div class="brand"><div class="logo">C</div><div><h1>CHHANON AI VIDEO STUDIO</h1><div class="tag" data-i="tag">YOUR STORY. YOUR CHARACTERS. YOUR MOVIE.</div></div></div>
+  <select class="lang" id="lang" aria-label="Language"><option value="km">ខ្មែរ</option><option value="en">English</option></select>
+</header>
+<section class="hero">
+  <div class="eyebrow">AI FILMMAKING WORKSPACE</div>
+  <h2 data-i="heroTitle">បង្កើតរឿងរបស់អ្នក ឱ្យក្លាយជាភាពយន្ត</h2>
+  <p data-i="heroDesc">រៀបចំសាច់រឿង តួអង្គ ឈុតឆាក និងគម្រោងវីដេអូរបស់អ្នកនៅកន្លែងតែមួយ។ នេះជាជំហានដំបូងនៃ CHHANON AI VIDEO STUDIO។</p>
+  <div class="actions"><button onclick="showPage('new')" data-i="newProject">＋ បង្កើតគម្រោងថ្មី</button><button class="secondary" onclick="showPage('editor')" data-i="openEditor">បើក Video Editor</button></div>
+</section>
+<div class="layout">
+  <aside class="side"><nav class="nav">
+    <button class="active" data-page="home" onclick="showPage('home')">⌂ <span data-i="home">ទំព័រដើម</span></button>
+    <button data-page="projects" onclick="showPage('projects')">▤ <span data-i="projects">គម្រោងរបស់ខ្ញុំ</span></button>
+    <button data-page="new" onclick="showPage('new')">＋ <span data-i="new">គម្រោងថ្មី</span></button>
+    <button data-page="story" onclick="showPage('story')">✎ <span data-i="story">Story Maker</span></button>
+    <button data-page="characters" onclick="showPage('characters')">♙ <span data-i="characters">តួអង្គ</span></button>
+    <button data-page="editor" onclick="showPage('editor')">▣ <span data-i="editor">Video Editor</span></button>
+  </nav></aside>
+  <main class="content" id="content"></main>
+</div>
+<footer>CHHANON AI VIDEO STUDIO · Phase 1 prototype · Projects are saved in this browser on this device.</footer>
+</div>
+<script>
+const words={
+km:{tag:"YOUR STORY. YOUR CHARACTERS. YOUR MOVIE.",heroTitle:"បង្កើតរឿងរបស់អ្នក ឱ្យក្លាយជាភាពយន្ត",heroDesc:"រៀបចំសាច់រឿង តួអង្គ ឈុតឆាក និងគម្រោងវីដេអូរបស់អ្នកនៅកន្លែងតែមួយ។ នេះជាជំហានដំបូងនៃ CHHANON AI VIDEO STUDIO។",newProject:"＋ បង្កើតគម្រោងថ្មី",openEditor:"បើក Video Editor",home:"ទំព័រដើម",projects:"គម្រោងរបស់ខ្ញុំ",new:"គម្រោងថ្មី",story:"Story Maker",characters:"តួអង្គ",editor:"Video Editor",welcome:"សូមស្វាគមន៍មកកាន់ Studio",choose:"ជ្រើសរើសអ្វីដែលអ្នកចង់ធ្វើ",storyTile:"សរសេរគំនិត និងរៀបចំសាច់រឿង",charTile:"រក្សាទុកព័ត៌មានតួអង្គសម្រាប់ប្រើពេលក្រោយ",editTile:"សាកល្បងបញ្ចូលវីដេអូពីឧបករណ៍របស់អ្នក",createTitle:"បង្កើតគម្រោងថ្មី",projectName:"ឈ្មោះគម្រោង",type:"ប្រភេទវីដេអូ",cartoon:"រឿងតុក្កតា 3D",real:"ភាពយន្តបែបមនុស្សពិត",both:"ទាំងពីរ",mv:"MV ចម្រៀង",ratio:"ទម្រង់វីដេអូ",create:"រក្សាទុកគម្រោង",saved:"បានរក្សាទុកគម្រោងនៅក្នុងឧបករណ៍នេះ។",empty:"មិនទាន់មានគម្រោងទេ។",open:"បើក",delete:"លុប",storyTitle:"Story Maker — រៀបចំសាច់រឿង",idea:"សរសេរគំនិត ឬសាច់រឿងរបស់អ្នក",saveStory:"រក្សាទុកសាច់រឿង",storySaved:"បានរក្សាទុកសាច់រឿង។",characterTitle:"Character Library",charName:"ឈ្មោះតួអង្គ",charDesc:"ពិពណ៌នារូបរាង សម្លៀកបំពាក់ និងចរិត",saveChar:"រក្សាទុកតួអង្គ",charSaved:"បានរក្សាទុកតួអង្គ។",editorTitle:"Video Editor — សាកល្បងបញ្ចូលវីដេអូ",upload:"ជ្រើសរើសវីដេអូពីឧបករណ៍",preview:"វីដេអូសាកល្បង",phaseNote:"ចំណាំ៖ នេះជាគំរូដំណាក់កាលទី 1។ វាអាចបង្កើត និងរក្សាទុកព័ត៌មានគម្រោងក្នុង Browser និងបង្ហាញវីដេអូដែលអ្នកបញ្ចូល។ ការភ្ជាប់ AI បង្កើតវីដេអូ និងការនាំចេញវីដេអូច្រើនឈុត នឹងត្រូវអភិវឌ្ឍនៅដំណាក់កាលបន្ទាប់។",noVideo:"មិនទាន់បានជ្រើសរើសវីដេអូទេ។",nameRequired:"សូមបញ្ចូលឈ្មោះគម្រោង។"},
+en:{tag:"YOUR STORY. YOUR CHARACTERS. YOUR MOVIE.",heroTitle:"Turn your story into a movie",heroDesc:"Organize stories, characters, scenes, and video projects in one workspace. This is the first step of CHHANON AI VIDEO STUDIO.",newProject:"＋ New Project",openEditor:"Open Video Editor",home:"Home",projects:"My Projects",new:"New Project",story:"Story Maker",characters:"Characters",editor:"Video Editor",welcome:"Welcome to your Studio",choose:"Choose what you want to work on",storyTile:"Write an idea and organize your story",charTile:"Save character details for future scenes",editTile:"Try importing a video from your device",createTitle:"Create a New Project",projectName:"Project name",type:"Video type",cartoon:"3D Cartoon",real:"Realistic film",both:"Both",mv:"Music video",ratio:"Video format",create:"Save Project",saved:"Project saved in this browser on this device.",empty:"No projects yet.",open:"Open",delete:"Delete",storyTitle:"Story Maker — Plan your story",idea:"Write your idea or story",saveStory:"Save Story",storySaved:"Story saved.",characterTitle:"Character Library",charName:"Character name",charDesc:"Describe appearance, clothing, and personality",saveChar:"Save Character",charSaved:"Character saved.",editorTitle:"Video Editor — Import a video",upload:"Choose a video from your device",preview:"Video preview",phaseNote:"Note: This is a Phase 1 prototype. It can create and save project information in this browser and preview a video you import. AI video generation and multi-clip export will be developed in later phases.",noVideo:"No video selected yet.",nameRequired:"Please enter a project name."}
+};
+let lang="km", projects=JSON.parse(localStorage.getItem("chhanon_projects")||"[]"), characters=JSON.parse(localStorage.getItem("chhanon_chars")||"[]");
+function t(k){return words[lang][k]||k}
+function setLang(v){lang=v;document.documentElement.lang=v;document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));render(current)}
+let current="home";
+function showPage(p){current=p;document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===p));render(p)}
+function render(p){
+const c=document.getElementById("content");
+if(p==="home"){c.innerHTML=`<div class="section-head"><div><h3>${t("welcome")}</h3><div class="muted">${t("choose")}</div></div></div><div class="tiles"><div class="tile"><div class="ico">✎</div><h4>${t("story")}</h4><p>${t("storyTile")}</p><br><button class="secondary" onclick="showPage('story')">${t("open")}</button></div><div class="tile"><div class="ico">♙</div><h4>${t("characters")}</h4><p>${t("charTile")}</p><br><button class="secondary" onclick="showPage('characters')">${t("open")}</button></div><div class="tile"><div class="ico">▣</div><h4>${t("editor")}</h4><p>${t("editTile")}</p><br><button class="secondary" onclick="showPage('editor')">${t("open")}</button></div><div class="tile"><div class="ico">🎬</div><h4>${t("projects")}</h4><p>${projects.length} project(s)</p><br><button class="secondary" onclick="showPage('projects')">${t("open")}</button></div></div><div class="notice" style="margin-top:14px">${t("phaseNote")}</div>`}
+if(p==="new"){c.innerHTML=`<div class="panel"><h3>${t("createTitle")}</h3><form onsubmit="createProject(event)"><div class="field"><label>${t("projectName")}</label><input id="pname" required placeholder="My First Movie"></div><div class="field"><label>${t("type")}</label><select id="ptype"><option>${t("both")}</option><option>${t("cartoon")}</option><option>${t("real")}</option><option>${t("mv")}</option></select></div><div class="field"><label>${t("ratio")}</label><select id="pratio"><option>16:9</option><option>9:16</option><option>1:1</option></select></div><button>${t("create")}</button></form></div>`}
+if(p==="projects"){c.innerHTML=`<div class="section-head"><h3>${t("projects")}</h3><button onclick="showPage('new')">${t("newProject")}</button></div><div class="panel">${projects.length?projects.map((x,i)=>`<div class="project"><div><b>${esc(x.name)}</b><div class="muted">${esc(x.type)} · ${x.ratio} · ${new Date(x.date).toLocaleDateString()}</div></div><div><button class="secondary" onclick="openProject(${i})">${t("open")}</button> <button class="secondary" onclick="deleteProject(${i})">${t("delete")}</button></div></div>`).join(""):t("empty")}</div>`}
+if(p==="story"){c.innerHTML=`<div class="panel"><h3>${t("storyTitle")}</h3><div class="field"><label>${t("idea")}</label><textarea id="storytext" placeholder="A young hero begins an adventure..."></textarea></div><button onclick="saveStory()">${t("saveStory")}</button><p class="muted" id="storymsg"></p></div><div class="notice">${t("phaseNote")}</div>`;document.getElementById("storytext").value=localStorage.getItem("chhanon_story")||""}
+if(p==="characters"){c.innerHTML=`<div class="panel"><h3>${t("characterTitle")}</h3><div class="field"><label>${t("charName")}</label><input id="cname"></div><div class="field"><label>${t("charDesc")}</label><textarea id="cdesc"></textarea></div><button onclick="saveChar()">${t("saveChar")}</button></div><div class="panel">${characters.map((x,i)=>`<div class="project"><div><b>${esc(x.name)}</b><div class="muted">${esc(x.desc)}</div></div><button class="secondary" onclick="deleteChar(${i})">${t("delete")}</button></div>`).join("")||t("empty")}</div>`}
+if(p==="editor"){c.innerHTML=`<div class="panel"><h3>${t("editorTitle")}</h3><div class="drop"><div style="font-size:30px">⬆</div><p>${t("upload")}</p><input type="file" id="videoFile" accept="video/*"></div><video id="preview" class="video" controls playsinline style="display:none"></video><p id="videomsg" class="muted">${t("noVideo")}</p></div><div class="notice">${t("phaseNote")}</div>`;document.getElementById("videoFile").addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;const v=document.getElementById("preview");v.src=URL.createObjectURL(f);v.style.display="block";document.getElementById("videomsg").textContent=f.name+" · "+(f.size/1048576).toFixed(1)+" MB"})}
+}
+function createProject(e){e.preventDefault();const name=document.getElementById("pname").value.trim();if(!name){alert(t("nameRequired"));return}projects.unshift({name,type:document.getElementById("ptype").value,ratio:document.getElementById("pratio").value,date:Date.now()});localStorage.setItem("chhanon_projects",JSON.stringify(projects));alert(t("saved"));showPage("projects")}
+function deleteProject(i){projects.splice(i,1);localStorage.setItem("chhanon_projects",JSON.stringify(projects));render("projects")}
+function openProject(i){const p=projects[i];localStorage.setItem("chhanon_active_project",JSON.stringify(p));showPage("story")}
+function saveStory(){localStorage.setItem("chhanon_story",document.getElementById("storytext").value);document.getElementById("storymsg").textContent=t("storySaved")}
+function saveChar(){const n=document.getElementById("cname").value.trim(),d=document.getElementById("cdesc").value.trim();if(!n)return;characters.push({name:n,desc:d});localStorage.setItem("chhanon_chars",JSON.stringify(characters));render("characters")}
+function deleteChar(i){characters.splice(i,1);localStorage.setItem("chhanon_chars",JSON.stringify(characters));render("characters")}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+document.getElementById("lang").addEventListener("change",e=>setLang(e.target.value));
+render("home");
+</script>
+</body></html>
